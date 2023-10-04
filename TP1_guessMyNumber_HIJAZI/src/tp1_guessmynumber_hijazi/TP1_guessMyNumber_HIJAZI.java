@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tp1_guessmynumber_hijazi;
+
 import java.util.Random;
 import java.util.Scanner;
 /**
@@ -12,12 +13,31 @@ import java.util.Scanner;
 public class TP1_guessMyNumber_HIJAZI {
 
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments  
      */
     public static void main(String[] args) {
-        Scanner sc;
-        Random generateurAleat = new Random();
-        System.out.println(generateurAleat);
+         int generateurAleat = random.nextInt(101);
+         System.out.print("Saisissez un nombre entre 0 et 100 : ");
+        int x = scanner.nextInt();
+        
+        if (x < generateurAleat) {{
+                System.out.println("Trop petit !");
+            } 
+            else if (x > generateurAleat) {
+                System.out.println("Trop grand !");
+            } 
+            else   {
+                System.out.println("Bravo, les 2 nombres sont égaux !");
+                    break;
+            }
+        }
+        
+        while (x != generateurAleat) {
+            System.out.println("Le nombre ne correspond pas. Réessayer!");
+        }
+        
+       
     }
     
 }
+}    
