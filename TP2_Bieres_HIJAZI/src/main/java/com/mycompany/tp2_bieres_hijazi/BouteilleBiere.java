@@ -26,7 +26,6 @@ nom = unNom;
 degreAlcool = unDegre;
 brasserie = uneBrasserie;
 ouverte = false;
-}
 
 
 }
