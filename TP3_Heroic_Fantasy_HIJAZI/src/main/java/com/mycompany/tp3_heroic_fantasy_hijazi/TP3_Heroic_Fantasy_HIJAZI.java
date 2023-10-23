@@ -12,6 +12,16 @@ package com.mycompany.tp3_heroic_fantasy_hijazi;
 public class TP3_Heroic_Fantasy_HIJAZI {
 
     public static void main(String[] args) {
-        
+        Epee Excalibur = new Epee ("Excalibur", 7, 5);
+        Epee Durandal = new Epee ("Durandal",4,7);
+        Baton Chêne = new Baton ("Chêne", 4, 5);
+        Baton Charme = new Baton ("Charme", 5, 6);
+        ArrayList<Arme> listeArme=new ArrayList<Arme>();
+        listeArme.add ("Excalibur");
+        listeArme.add ("Durandal");
+        listeArme.add ("Chêne");
+        listeArme.add ("Charme");
+        listeArme.size();
+        System.out.println(listeArme); 
      }
 }

@@ -10,17 +10,17 @@ package com.mycompany.tp3_heroic_fantasy_hijazi;
  */
 public abstract class Arme {
     String nom; 
-    int NiveauAttaque;
+    int nivAttaque;
 
     public String lireNomArme() {
         return nom; 
     } 
     
     public int lireNiveauAttaque() {
-        return NiveauAttaque;
+        return nivAttaque;
     }
     @Override
     public String toString() {
-        return "Nom: " + nom + "Niveau d'attaque: " + NiveauAttaque;  
+        return "Nom: " + nom + "Niveau d'attaque: " + nivAttaque;  
     }
 }
