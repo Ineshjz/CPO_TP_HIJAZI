@@ -10,7 +10,20 @@ package Armes;
  */
 public abstract class Arme {
     String nom; 
-    int nivAttaque;
+
+    /**
+     *
+     */
+    public int nivAttaque;
+    public Arme(String nom, int nivAttaque) {
+        this.nom =nom; 
+        if(nivAttaque<100) {
+            this.nivAttaque =nivAttaque;
+        }else{
+            System.out.println("Erreur, saisir un niveau d'attaque inférieur à 100");
+            this.nivAttaque = 0;
+        }
+    }
 
     public String lireNomArme() {
         return nom; 

@@ -3,14 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Armes;
-import Arme.*;
 
-/**
+/*
  *
  * @author inesh
  */
 public class Baton extends Arme {
-    int age;
+    public int age;
     
     public Baton(String nom, int nivAttaque, int age) {
         super(nom,nivAttaque);
@@ -18,7 +17,11 @@ public class Baton extends Arme {
         this.age = age;     
       } else {
         System.out.println("Erreur");
+        this.age=0; 
        }
+    }
+    public int Age() {
+        return age;
     }
     
 }

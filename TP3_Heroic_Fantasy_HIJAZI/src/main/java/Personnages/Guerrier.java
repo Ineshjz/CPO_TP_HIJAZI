@@ -13,16 +13,33 @@ import Personnages.Personnages;
  * @author inesh
  */
 public class Guerrier extends Personnages {
-    boolean aCheval;
+    String aCheval;
+    static int nbGuerriers;
     
-    public Guerrier(String nom, int nivDeVie, boolean aCheval) {
+    public Guerrier(String nom, int nivDeVie, String aCheval) {
         super(nom, nivDeVie);
-     
+        this.aCheval=aCheval;
+        nbGuerriers++;
+    }
+        @Override
+        public void finalize(){
+        nbGuerriers--;
+        }
         
-    }
-
-    public void setaCheval(boolean aCheval) {
-        this.aCheval = aCheval;
-    }
     
+      public boolean setConfirmé(boolean Confirmé) {
+        if("oui".equals(this.aCheval)){
+            return true;
+        }else{
+            return false;
+        }
+
+      public void aCheval(String newCheval) {
+        this.aCheval =newCheval;
+    }
+    public String LireCheval(){
+        return this.aCheval;
+    }
 }
+    
+
