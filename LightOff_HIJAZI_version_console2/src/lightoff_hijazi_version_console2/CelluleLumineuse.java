@@ -11,7 +11,7 @@ package lightoff_hijazi_version_console2;
 public class CelluleLumineuse {
     boolean etat; //true= allumée et false= eteinte
     
-    public CelluleLumineuse(boolean etat) {
+    public CelluleLumineuse() {
         this.etat= false;  
         }
         

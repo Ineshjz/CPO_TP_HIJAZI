@@ -25,6 +25,8 @@ public class LightOff_HIJAZI_version_console2 {
         Noire.getEtat();
         Blanche.getEtat();
         
+        System.out.println("La classe CelluleLumineuse a bien été ajoutée");
+        
     }
     
 }
