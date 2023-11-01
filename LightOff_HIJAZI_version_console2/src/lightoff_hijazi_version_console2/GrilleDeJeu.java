@@ -31,6 +31,9 @@ public class GrilleDeJeu {
             }
         }
     }
+
+    GrilleDeJeu() {
+    }
     public void eteindreToutesLesCellules(){
         for (int i=0; i<nbLignes; i++){ //la méthode parcours toutes les lignes et colonnes
             for(int j=0; j<nbColonnes; j++){
@@ -63,7 +66,7 @@ public class GrilleDeJeu {
             matriceCellules[i][(nbLignes-i)].activerCellule();
             }
         }
-        return matriceCellules; 
+         
         }
     public void melangerMatriceAleatoirement (int nbTours){
         this.eteindreToutesLesCellules(); 
@@ -76,22 +79,33 @@ public class GrilleDeJeu {
             matriceCellules[i][idColonne].activerCellule();
         }
     }
+
+    /**
+     *
+     * @param idLigne
+     */
+    public void activerLigneDeCellules (int idLigne){
+        for (int i=0; i<nbColonnes; i++){
+            matriceCellules[idLigne][i].activerCellule();
+        }
+    }
     public void activerdiagonaleDescendante(){
-         for (int i=0; i<nbLignes; i++){
-             matriceCellules[i][i].activerCellule();
-         }
+        for (int i=0; i<nbLignes; i++){
+            matriceCellules[i][i].activerCellule();
+        }
+    }
+    public void activerdiagonaleMontante(){
+        for (int i=0; i<nbLignes; i++){
+            matriceCellules[i][(nbLignes-i)].activerCellule();
+        }
     }
     public boolean cellulesToutesEteintes(){
         int n=0; 
         boolean x = false; 
         for (int i=0; i<nbLignes; i++){
             for (int j=0; j<nbColonnes; j++){
-                if (matriceCellules[i][j].estEteint()==false){
-                    n+=1; 
-                }
-                else{
-                    n=n; 
-                }
+                matriceCellules[i][j].estEteint();
+     
             }
         }
         if ( n==0){
