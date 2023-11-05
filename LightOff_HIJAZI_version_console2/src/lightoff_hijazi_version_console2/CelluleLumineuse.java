@@ -35,7 +35,7 @@ public void eteindreCellule(){
      *
      */
 public void estEteint(){
-        if ( etat = true){
+        if ( etat == true){
             this.etat = false;
     }   else {
             if (etat ==false) {

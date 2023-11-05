@@ -45,7 +45,7 @@ public class LightOff_HIJAZI_version_console2 {
         
         //affichage.activerdiagonaleMontante();
         //System.out.println(affichage);
-        //Ne fonctionne pas
+        //ok
         
         //affichage.activerLigneColonneOuDiagonaleAleatoire();
         //System.out.println(affichage);
@@ -56,15 +56,10 @@ public class LightOff_HIJAZI_version_console2 {
         //ok 
         
         System.out.println("La classe GrilleDeJeu a été ajoutée etb fonctionne");
-        Partie partie = new Partie (grille); //grille non reconnu
+        GrilleDeJeu grille = new GrilleDeJeu(5,5);
+        Partie partie = new Partie (grille,10);
         partie.initialiserPartie();
-        partie.lancerPartie();
-
-        
-        
-        
-        
-        
+        partie.lancerPartie();  
     }
     
 }
