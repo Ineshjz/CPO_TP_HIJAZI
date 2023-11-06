@@ -17,14 +17,14 @@ public class Partie {
         this.nbCoups = 0;
     }
     public void initialiserPartie(){
-        grille.melangerMatriceAleatoirement(nbCoups); //melange grille    
+        grille.melangerMatriceAleatoirement(10); //melange grille    
     }
     public void lancerPartie(){
         Scanner scanner = new Scanner (System.in);
         System.out.println(grille); //grille à l'état initial
         
         while(!grille.cellulesToutesEteintes()) {
-            System.out.println("1.Activer une colonne\n" + "2.Activer une ligne" + "3.Activer une diagonale descendante\n" + "4.Activer une diagonale montante"); 
+            System.out.println("1.Activer une colonne\n 2.Activer une ligne\n 3.Activer une diagonale descendante\n 4.Activer une diagonale montante"); 
 // print ne fonctionne pas??
     
             int cp =scanner.nextInt();

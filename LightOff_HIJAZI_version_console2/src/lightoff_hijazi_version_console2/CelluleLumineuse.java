@@ -38,11 +38,10 @@ public void estEteint(){
         if ( etat == true){
             this.etat = false;
     }   else {
-            if (etat ==false) {
                 this.etat = true; 
             }
         }
-    }
+    
 public void getEtat(){
     if(etat==true){
         this.etat= true; 
