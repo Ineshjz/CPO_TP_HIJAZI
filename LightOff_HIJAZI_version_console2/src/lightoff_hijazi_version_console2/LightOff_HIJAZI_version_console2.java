@@ -56,10 +56,10 @@ public class LightOff_HIJAZI_version_console2 {
         //ok 
         
         System.out.println("La classe GrilleDeJeu a été ajoutée etb fonctionne");
-        GrilleDeJeu grille = new GrilleDeJeu(5,5);
-        Partie partie = new Partie (grille,10);
-        partie.initialiserPartie();
-        partie.lancerPartie();  
+        GrilleDeJeu grille_ = new GrilleDeJeu(3,3);
+        Partie partie_ = new Partie (grille_,5);
+        partie_.initialiserPartie();
+        partie_.lancerPartie();
     }
     
 }

@@ -12,39 +12,42 @@ public class Partie {
     GrilleDeJeu grille; 
     int nbCoups;
 
-    public Partie(GrilleDeJeu grille, int nbCoups) {
-        grille = new GrilleDeJeu();
+    public Partie(GrilleDeJeu unegrille, int nbCoups) {
+        this.grille = unegrille;
+        //grille = new GrilleDeJeu(10,10);
         this.nbCoups = 0;
     }
     public void initialiserPartie(){
-        grille.melangerMatriceAleatoirement(10); //melange grille    
+        grille.melangerMatriceAleatoirement(5); //melange grille    
     }
     public void lancerPartie(){
         Scanner scanner = new Scanner (System.in);
         System.out.println(grille); //grille à l'état initial
         
         while(!grille.cellulesToutesEteintes()) {
-            System.out.println("1.Activer une colonne\n 2.Activer une ligne\n 3.Activer une diagonale descendante\n 4.Activer une diagonale montante"); 
-// print ne fonctionne pas??
+            System.out.println("1.Activer une colonne\n2.Activer une ligne\n3.Activer une diagonale descendante\n4.Activer une diagonale montante"); 
+
     
             int cp =scanner.nextInt();
             nbCoups++;
-            if (cp==1){
-                System.out.println("Saisir le numéro de la colonne à modifier");
-                int colonne = scanner.nextInt(); 
-                grille.activerColonneDeCellules(colonne);
-            }
-            if(cp==2){
-                System.out.println("Saisissez le numéro de la ligne à modifier");
-                int ligne = scanner.nextInt();
-                grille.activerLigneDeCellules(ligne);
-            }
-            if(cp==3){
-                //System.out.println("Saissisez le numéro de la diagonale descendante à modifier");
-                grille.activerdiagonaleDescendante();
-            }
-            if (cp==4){
-                grille.activerdiagonaleMontante();
+            switch (cp){
+                case 1: 
+                    System.out.println("Saisir le numéro de la colonne à modifier");
+                    int colonne = scanner.nextInt(); 
+                    grille.activerColonneDeCellules(colonne);
+                    break;
+            
+                case 2:
+                    System.out.println("Saisissez le numéro de la ligne à modifier");
+                    int ligne = scanner.nextInt();
+                    grille.activerLigneDeCellules(ligne);
+                    break;
+                case 3:
+                    grille.activerdiagonaleDescendante();
+                    break;
+                case 4:
+                    grille.activerdiagonaleMontante();
+                    break;
             }
        
             System.out.println(grille);

@@ -31,9 +31,6 @@ public class GrilleDeJeu {
             }
         }
     }
-
-    GrilleDeJeu() {
-    }
     public void eteindreToutesLesCellules(){
         for (int i=0; i<nbLignes; i++){ //la méthode parcours toutes les lignes et colonnes
             for(int j=0; j<nbColonnes; j++){
@@ -68,6 +65,11 @@ public class GrilleDeJeu {
         }
          
         }
+
+    /**
+     *
+     * @param nbTours
+     */
     public void melangerMatriceAleatoirement (int nbTours){
         this.eteindreToutesLesCellules(); 
         for (int i =0; i<nbTours; i++){
@@ -105,7 +107,7 @@ public class GrilleDeJeu {
         for (int i=0; i<nbLignes; i++){
             for (int j=0; j<nbColonnes; j++){
                 matriceCellules[i][j].estEteint();
-     
+                n++;
             }
         }
         if ( n==0){
