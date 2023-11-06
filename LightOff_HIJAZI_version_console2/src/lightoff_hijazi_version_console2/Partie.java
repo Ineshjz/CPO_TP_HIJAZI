@@ -23,6 +23,23 @@ public class Partie {
     public void lancerPartie(){
         Scanner scanner = new Scanner (System.in);
         System.out.println(grille); //grille à l'état initial
+        // Amélioration 1: niveau de difficulté + taille de grille
+            System.out.println("Choisir le niveau de difficulté:\n1.Débutant\n2.Intermédiaire\n3.Difficile");
+            int nv =scanner.nextInt();
+            nbCoups++;
+            switch(nv){
+                case 1:
+                    grille = new GrilleDeJeu (3,3);
+                    break;
+                case 2:
+                    grille= new GrilleDeJeu (5,5);
+                    break;
+                case 3:
+                    grille= new GrilleDeJeu (10,10);
+                    break;
+            }
+            System.out.println(grille);
+
         
         while(!grille.cellulesToutesEteintes()) {
             System.out.println("1.Activer une colonne\n2.Activer une ligne\n3.Activer une diagonale descendante\n4.Activer une diagonale montante"); 
