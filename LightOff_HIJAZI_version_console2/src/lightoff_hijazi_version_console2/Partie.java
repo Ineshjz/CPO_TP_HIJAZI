@@ -20,14 +20,15 @@ public class Partie {
     public void initialiserPartie(){
         grille.melangerMatriceAleatoirement(5); //melange grille    
     }
+    
     public void lancerPartie(){
         Scanner scanner = new Scanner (System.in);
         System.out.println(grille); //grille à l'état initial
-        // Amélioration 1: niveau de difficulté + taille de grille
+        // Amélioration 1: niveau de difficulté + taille de grille différente
             System.out.println("Choisir le niveau de difficulté:\n1.Débutant\n2.Intermédiaire\n3.Difficile");
-            int nv =scanner.nextInt();
+            int niv =scanner.nextInt();
             nbCoups++;
-            switch(nv){
+            switch(niv){
                 case 1:
                     grille = new GrilleDeJeu (3,3);
                     break;
@@ -41,7 +42,7 @@ public class Partie {
             System.out.println(grille);
 
         
-        while(!grille.cellulesToutesEteintes()) {
+        while(!grille.cellulesToutesEteintes()&&nbCoups<11) {
             System.out.println("1.Activer une colonne\n2.Activer une ligne\n3.Activer une diagonale descendante\n4.Activer une diagonale montante"); 
 
     
@@ -65,12 +66,19 @@ public class Partie {
                 case 4:
                     grille.activerdiagonaleMontante();
                     break;
+                    
             }
        
             System.out.println(grille);
+            
         }
-            System.out.println("Le nombre de coups utilisé est: " + nbCoups);
+            if(nbCoups<11){
+                System.out.println("Le nombre de coups utilisé est: " + nbCoups + "/10");
+            
             System.out.println ("C'est gagné! Toutes les cellules sont éteintes.");
+            } else {
+                System.out.println("Game Over! Nombre de coups max atteint :(");
+            }
         }
 }
     

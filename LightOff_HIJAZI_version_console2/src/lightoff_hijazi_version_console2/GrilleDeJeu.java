@@ -118,6 +118,7 @@ public class GrilleDeJeu {
         }
         return x;
     }
+  
 
     @Override
     public String toString() { 
