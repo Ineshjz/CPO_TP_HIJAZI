@@ -42,7 +42,7 @@ public class Partie {
             System.out.println(grille);
 
         
-        while(!grille.cellulesToutesEteintes()&&nbCoups<11) {
+        while(!grille.cellulesToutesEteintes()&&nbCoups<11) { //Amélioration 2: Nombre de coups maximum imposé 
             System.out.println("1.Activer une colonne\n2.Activer une ligne\n3.Activer une diagonale descendante\n4.Activer une diagonale montante"); 
 
     
@@ -72,7 +72,7 @@ public class Partie {
             System.out.println(grille);
             
         }
-            if(nbCoups<11){
+            if(nbCoups<11){ // Nb de coups max non atteint, le jeu continue
                 System.out.println("Le nombre de coups utilisé est: " + nbCoups + "/10");
             
             System.out.println ("C'est gagné! Toutes les cellules sont éteintes.");
