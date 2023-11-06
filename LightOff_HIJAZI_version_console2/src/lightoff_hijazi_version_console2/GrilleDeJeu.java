@@ -97,9 +97,9 @@ public class GrilleDeJeu {
         }
     }
     public void activerdiagonaleMontante(){
-        for (int i=0; i<nbLignes; i++){
-            matriceCellules[i][(nbLignes-i)].activerCellule();
-        }
+        for (int i=0; i<nbColonnes; i++){
+            matriceCellules[nbColonnes-1-i][i].activerCellule();
+        } //ne fonctionne pas 
     }
     public boolean cellulesToutesEteintes(){
         int n=0; 
