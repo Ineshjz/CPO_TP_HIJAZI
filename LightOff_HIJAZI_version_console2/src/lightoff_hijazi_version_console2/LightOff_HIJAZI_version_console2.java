@@ -27,9 +27,9 @@ public class LightOff_HIJAZI_version_console2 {
         
         //System.out.println("La classe CelluleLumineuse a bien été ajoutée");
         
-        GrilleDeJeu affichage = new GrilleDeJeu(4,4);
+        /*GrilleDeJeu affichage = new GrilleDeJeu(4,4);
         affichage.cellulesToutesEteintes();
-        System.out.println(affichage);
+        System.out.println(affichage);*/
         
         //affichage.activerColonneDeCellules(0);
         //System.out.println(affichage);

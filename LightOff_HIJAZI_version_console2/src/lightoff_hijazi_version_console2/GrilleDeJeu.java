@@ -77,7 +77,7 @@ public class GrilleDeJeu {
         }
     }
     public void activerColonneDeCellules (int idColonne){
-        for (int i=0; i<nbLignes; i++){
+        for (int i=0; i<nbColonnes; i++){
             matriceCellules[i][idColonne].activerCellule();
         }
     }

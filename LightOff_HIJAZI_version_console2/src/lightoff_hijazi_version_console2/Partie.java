@@ -39,6 +39,7 @@ public class Partie {
                     grille= new GrilleDeJeu (10,10);
                     break;
             }
+            grille.melangerMatriceAleatoirement(5);
             System.out.println(grille);
 
         
