@@ -267,7 +267,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         this.grille.activerColonneDeCellules(6);
         repaint();           // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
-
+     
+    
     /**
      * @param args the command line arguments
      */
