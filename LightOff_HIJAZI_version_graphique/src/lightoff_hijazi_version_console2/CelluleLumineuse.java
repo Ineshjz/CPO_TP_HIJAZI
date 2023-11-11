@@ -33,12 +33,13 @@ public void eteindreCellule(){
 
     /**
      *
+     * @return 
      */
-public void estEteint(){
+public boolean estEteint(){
         if ( etat == true){
-            this.etat = false;
+            return true;
     }   else {
-                this.etat = true; 
+                return false; 
             }
         }
     
