@@ -106,8 +106,12 @@ public class GrilleDeJeu {
         boolean x = false; 
         for (int i=0; i<nbLignes; i++){
             for (int j=0; j<nbColonnes; j++){
-                matriceCellules[i][j].estEteint();
-                n++;
+                if (matriceCellules[i][j].estEteint()== false){
+                    n+=1;
+                }
+                else {
+                    n=n;
+                }
             }
         }
         if ( n==0){
