@@ -34,13 +34,14 @@ public void eteindreCellule(){
     /**
      *
      */
-public void estEteint(){
+public boolean estEteint(){
         if ( etat == true){
-            this.etat = false;
+            return true;
     }   else {
-                this.etat = true; 
+                return false; 
             }
         }
+    
     
 public void getEtat(){
     if(etat==true){
