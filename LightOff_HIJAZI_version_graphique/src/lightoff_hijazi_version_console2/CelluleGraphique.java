@@ -35,9 +35,9 @@ public class CelluleGraphique extends JButton {
         int w = this.getWidth();
         int h = this.getHeight();
         if (celluleLumineuseAssociee.estEteint() == true) {
-            g.setColor(Color.orange);
-        } else {
             g.setColor(Color.red);
+        } else {
+            g.setColor(Color.pink);
         }
         g.fillOval(2, 2, w - 4, h - 4);
         

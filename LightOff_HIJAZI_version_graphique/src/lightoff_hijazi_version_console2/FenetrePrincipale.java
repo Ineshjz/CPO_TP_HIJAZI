@@ -27,7 +27,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
            grille.melangerMatriceAleatoirement(10);
        }
     
- 
+   public void f(){
+                               this.dispose();
+   }
 
     /**
      * Creates new form FenetrePrincipale
@@ -66,6 +68,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 public void actionPerformed(ActionEvent e) {
                     grille.activerLigneDeCellules(j);
                                 if (grille.cellulesToutesEteintes()) {
+                                    f();
                 FenetreVictoire f = new FenetreVictoire();
                 f.setVisible(true);
             }
@@ -90,10 +93,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     grille.activerColonneDeCellules(j);
-                                if (grille.cellulesToutesEteintes()) {
-                FenetreVictoire f = new FenetreVictoire();
-                f.setVisible(true);
-            }
+                    if (grille.cellulesToutesEteintes()) {
+                        f();
+                        FenetreVictoire f = new FenetreVictoire();
+                        f.setVisible(true);
+                    }
                     repaint();
                 }
             };
@@ -133,7 +137,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1000, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(102, 102, 255));
+        PanneauGrille.setBackground(new java.awt.Color(153, 102, 255));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
@@ -148,23 +152,29 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 400, 400));
 
-        DiagMontante.setText("Diagonale Montante");
+        DiagMontante.setBackground(new java.awt.Color(0, 0, 0));
+        DiagMontante.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        DiagMontante.setForeground(new java.awt.Color(255, 255, 255));
+        DiagMontante.setText("Diagonale Montante (/)");
         DiagMontante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DiagMontanteActionPerformed(evt);
             }
         });
-        getContentPane().add(DiagMontante, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, -1, -1));
+        getContentPane().add(DiagMontante, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, -1, -1));
 
-        DiagDscendante.setText("Diagonale Descendante");
+        DiagDscendante.setBackground(new java.awt.Color(0, 0, 0));
+        DiagDscendante.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        DiagDscendante.setForeground(new java.awt.Color(255, 255, 255));
+        DiagDscendante.setText("Diagonale Descendante (\\)");
         DiagDscendante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DiagDscendanteActionPerformed(evt);
             }
         });
-        getContentPane().add(DiagDscendante, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 580, -1, -1));
+        getContentPane().add(DiagDscendante, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, -1, -1));
 
-        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(102, 204, 255));
+        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(0, 0, 0));
         PanneauBoutonsVerticaux.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout PanneauBoutonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBoutonsVerticaux);
@@ -180,7 +190,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, -1));
 
-        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(102, 204, 255));
+        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout PanneauBoutonsHorizontauxLayout = new javax.swing.GroupLayout(PanneauBoutonsHorizontaux);
         PanneauBoutonsHorizontaux.setLayout(PanneauBoutonsHorizontauxLayout);
@@ -195,11 +205,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauBoutonsHorizontaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
 
-        jTextArea2.setBackground(new java.awt.Color(51, 204, 255));
+        jTextArea2.setBackground(new java.awt.Color(0, 0, 0));
         jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Yu Gothic", 1, 12)); // NOI18N
+        jTextArea2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea2.setRows(5);
-        jTextArea2.setText("LE BUT DU JEU EST D'ETEINDRE\nTOUTES LES CELLULES\n    ORANGE = CELLULE ETEINTE\n    ROUGE= CELLULE ALLUMEE\nBONNE CHANCE!");
+        jTextArea2.setText("LE BUT DU JEU EST D'ETEINDRE\nTOUTES LES CELLULES\n    ROUGE = CELLULE ETEINTE\n    ROSE= CELLULE ALLUMEE\nBONNE CHANCE!");
         jScrollPane2.setViewportView(jTextArea2);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, -1, -1));
@@ -211,6 +222,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         this.grille.activerdiagonaleMontante();
         repaint();
         if (grille.cellulesToutesEteintes()){
+            this.dispose();
             FenetreVictoire f = new FenetreVictoire() ;
             f.setVisible(true);
         }
@@ -222,6 +234,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         this.grille.activerdiagonaleDescendante();
         repaint();
         if (grille.cellulesToutesEteintes()) {
+            this.dispose();
             FenetreVictoire f = new FenetreVictoire();
             f.setVisible(true);
         }
@@ -259,7 +272,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FenetrePrincipale().setVisible(true);
+                new Page().setVisible(true);
             }
         });
     }
